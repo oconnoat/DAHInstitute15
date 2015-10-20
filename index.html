@@ -1,0 +1,223 @@
+<!doctype html>
+<!-- Based on impress.js Copyright 2011-2012 Bartek Szopka
+
+Released under the MIT and GPL (version 2 or later) Licenses.
+
+Note, this is a total mess of inconsistent css, html, javascript and content. 
+It's probably a good example of how difficult it is for me to separate content with presentation in practice.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title> </title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- basic setup -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/base.css" /> -->
+    <!-- menus and buttons -->
+    <link rel="stylesheet" type="text/css" href="css/navmenu.css" />
+
+    <!-- presentation-specific styling, which might be done with less instead of css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less"> -->
+
+
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    
+    <!-- each slide must be a div with class step,  must have some co-ordinates -->
+    <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>Text as Networks</h1> 
+        <p>Dr. Alexander O&apos;Connor <br /><small>ADAPT Centre, Dublin City
+            University</small></p>
+        <p><i class="fa fa-twitter fa-large"></i>@<a
+              href="https://www.twitter.com/uberalex/">uberalex</a></p>
+        <div class="notes">
+            <!--speaker notes-->
+            <p>Example Speaker Notes.</p>
+        </div>
+    </div>
+    <!-- Introduction section -->
+    <div id="Info80" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <div class="notes">
+            <p>Depending on who you listen to, 'unstructured data' makes up as much as 80% of the stored knowledge of mankind. To a very great extent, the way we transform data into knowledge is to add context: to group things that are alike, to count them and to examine their change over time, space or in relation to each other.
+            In this talk, what I will try to address is some of the types of things that we can use computers to count, and to aggregate, especially from text. When we see a block of text, what are we really looking at?
+            </p>
+        </div>
+    </div>
+   <div id="characterLevel" class="step" data-x="1200" data-y="10000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <input type="text" id="character" />
+        <button id="emojibutton" onclick="displayEmoji()">Convert</button>
+        <p id="emoji" ></p> 
+       <div class="notes">
+           <p> 0x1f600 <br /> 0x0041 (A) <br /> 0x0061 (a) <br /> 0x0040 (@) <br /> 0x00C5 (Å) <br /> 0x00212B (Ångstrom) </p>
+           <p> A computer just sees a series of byte codes. Two different codes can appear the same to a human, or, depending on the system, two different glyphs can be displayed for the same code.</p>
+        </div>
+    </div>
+    <!-- Annotations -->
+   <div id="Annotations" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1></h1> 
+        <div class="notes">
+            
+            <p>People don't think in terms of bytecodes, or even really in terms of letters. They tend to think in terms of <em>concepts</em>. How do we get from a stream of bytecodes to concepts people can use?</p>
+        </div>
+    </div>
+
+    <!-- The word Network -->
+   <div id="wordNetwork" class="step" data-x="1200" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1></h1> 
+        <div class="notes">
+            
+            <p>We can look at it from the word level. This is how your classic search engine works. The Document is jumbled up into a bag of words, and we count those words that are <em>like</em> each other.</p>
+            <p>When you pop in a query keyword, we use the index (a network which links the keywords to the documents) to find our path</p> 
+        </div>
+    </div>
+   <div id="TopicModels" class="step" data-x="2400" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        
+       
+        <div class="notes">
+            <p>We can take this concept of word networks one level further, we can begin to look at words and their neighbours.</p>
+        </div>
+    </div>
+   <div id="Embeddings" class="step" data-x="3600" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        
+       
+        <div class="notes">
+            <p>From Topic Models we can get, with very large amounts of data, to word embeddgings: we can learn the meaning of words from the company they keep </p>
+        </div>
+    </div>
+    <!-- The entity network -->
+    <div id="EntityNetwork" class="step" data-x="1200" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <img src="img/yojo.gif" />
+        <div class="notes">
+            <p>Entities (people, places, times, events, things) represent another semantic level. Now we're associating several labels with one concept.</p> 
+            <p>Image Source: <a href="http://www.jfsowa.com/ontology/ontometa.htm">http://www.jfsowa.com/ontology/ontometa.htm</a></p>
+        </div>
+    </div>
+    <div id="EntityNetwork2" class="step" data-x="1200" data-y="3600" data-z="-1200" data-rotate-x="0" data-rotate-y="90" data-rotate-z="0" data-scale="1">
+        
+        <div class="notes">
+            <p>Entities (people, places, times, events, things) represent another semantic level. Now we're associating several labels with one concept.</p> 
+        </div>
+    </div>
+    <div id="DocNetwork" class="step" data-x="1200" data-y="4800" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1></h1> 
+        <div class="notes">
+            <p>We can also take advantage of the document network, literally in the case of hypertext, but also through references, citations and other networks</p>
+        </div>
+    </div>
+    <!-- char-rnn -->
+   <div id="charrnn" class="step" data-x="1200" data-y="6000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+
+       <p>       PANDARUS:<br />
+Alas, I think he shall be come approached and the day<br />
+When little srain would be attain'd into being never fed,<br />
+And who is but a chain and subjects of his death,<br />
+I should not sleep.</p>
+
+<p>Second Senator:<br />
+They are away this miseries, produced upon my soul,<br />
+Breaking and strongly should be buried, when I perish<br />
+The earth and thoughts of many states.</p>
+
+<p>DUKE VINCENTIO:<br />
+Well, your wit is in the care of side and that.</p>
+
+<p>Second Lord:<br />
+They would be ruled after this chamber, and <br />
+my fair nues begun out of the fact, to be conveyed,<br />
+Whose noble souls I'll have the heart of the wars.</p?
+
+<p>Clown:<br />
+Come, sir, I will make did behold your worship.</p>
+
+<p>VIOLA:<br />
+I'll drink it.</p>
+        <div class="notes">
+            <p>Don't underestimate the power of character-level data.<br />Source: <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">http://karpathy.github.io/2015/05/21/rnn-effectiveness/</a></p> 
+        </div>
+    </div>
+   <!-- conclusion -->
+   <div id="Conclusion" class="step" data-x="0" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <div class="notes">
+            <p></p> 
+        </div>
+   </div>
+    <!-- keep an overview slide, you may wish to change the scaling and / or the co-ordinates -->
+    <div id="overview" class="step" data-x="600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="2">
+    </div>
+
+</div>
+<!-- end of impress -->
+
+<!-- a bar at the top with a timer. You could put other text or info in here by adding more spans -->
+<div id="navbar"><div id="timebar">&nbsp;</div><p> <span id="timer">Click to Start Timer.</span></p><p><input id="notebox" type="checkbox" /><label for="notebox">show notes</label></p></div>
+
+<!-- a little menu based on the slides -->
+<div class="hint note">
+    <p>Use the spacebar or arrow keys to navigate</p>
+</div>
+
+<!-- clicking on this reveals the quick-navigation bar -->
+<div id="menubutton" tabindex="1">
+    <i class="fa fa-bars fa-lg"></i>
+</div>
+
+<!-- quickly get to different slides here, the list is populated from the IDs of the slides -->
+<div id="navmenu">
+</div>
+
+
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").append('p').text('Tap on the left or right to navigate');
+}
+</script>
+
+<!-- LESS CSS -->
+<script src="lib/less.js/dist/less-1.7.5.js"></script>
+<!-- Load the presentation tool -->
+<script src="lib/impress.js/js/impress.js"></script>
+<!-- Load D3 -->
+<script src="lib/d3/d3.min.js"></script>
+<!-- Load the timer -->
+<script src="js/timer.js"></script>
+<!-- Menu -->
+<script src="js/navmenu.js"></script>
+<!-- -->
+<script src="js/diagram.js"></script>
+
+<script src="js/text.js"></script>
+
+<!-- Initialisation -->
+<script>impress().init();</script>
+<script>var time = 1000 * 60 * 15;
+        var clock = timer(time, update);
+</script>
+</body>
+</html>
