@@ -80,7 +80,9 @@ It's probably a good example of how difficult it is for me to separate content w
     </div>
     <!-- Annotations -->
    <div id="Annotations" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1></h1> 
+       <p>At <b>three o’clock</b> precisely I was at <b>Baker Street</b>, but <b>Holmes</b> had not yet returned. The landlady informed me that he had left the house shortly after <b> eight o’clock in the morning</b>.</p> 
+       <p>
+       At<i>|IN</i> three<i>|CD</i> o’clock<i>|JJ</i> precisely<i>|RB</i> I<i>|PRP</i> was<i>|VBD</i> at<i>|IN</i> Baker<i>|NNP</i> Street<i>|NNP</i> ,<i>|,</i> but<i>|CC</i> Holmes<i>|NNP</i> had<i>|VBD</i> not<i>|RB</i> yet<i>|RB</i> returned<i>|VBN</i> .<i>|.</i></p>
         <div class="notes">
             
             <p>People don't think in terms of bytecodes, or even really in terms of letters. They tend to think in terms of <em>concepts</em>. How do we get from a stream of bytecodes to concepts people can use?</p>
@@ -97,8 +99,21 @@ It's probably a good example of how difficult it is for me to separate content w
         </div>
     </div>
    <div id="TopicModels" class="step" data-x="2400" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        
-       
+        <ul class="topic">
+            <li>dreams</li><li>mind</li><li>dream</li><li>theory</li><li>waking</li><li>law</li><li>operation</li><li>reason</li><li>ideas</li><li>thought</li><li>nature</li><li>objects</li><li>sleep</li><li>ordinary</li><li>wholly</li><li>rev</li><li>cases</li><li>idea</li><li>combination</li>
+        </ul> 
+        <ol class="process">
+            <li>Extract Text</li> 
+            <li>Clean Text</li> 
+            <li>Divide the Corpus</li> 
+            <li>(LSI, LDA, NMF)</li>
+            <li>Interpret the Results</li> 
+            <li>...</li>
+            <li>Profit!</li>
+        </ol> 
+        <ul class="topic">
+<li>mass</li><li>artillery</li><li>pressure</li><li>physical</li><li>strain</li><li>made</li><li>involved</li><li>castiron</li><li>cast</li><li>mallet</li><li>large</li><li>mr</li><li>internal</li><li>powder</li><li>thickness</li><li>velocity</li><li>resistance</li><li>copper</li><li>section</li>
+        </ul>  
         <div class="notes">
             <p>We can take this concept of word networks one level further, we can begin to look at words and their neighbours.</p>
         </div>
@@ -108,6 +123,7 @@ It's probably a good example of how difficult it is for me to separate content w
        
         <div class="notes">
             <p>From Topic Models we can get, with very large amounts of data, to word embeddgings: we can learn the meaning of words from the company they keep </p>
+            <p>Source: <a href="http://dhbenelux.org/wp-content/uploads/2015/04/12.pdf">Emma Clarke</a></p>
         </div>
     </div>
     <!-- The entity network -->
@@ -119,7 +135,10 @@ It's probably a good example of how difficult it is for me to separate content w
         </div>
     </div>
     <div id="EntityNetwork2" class="step" data-x="1200" data-y="3600" data-z="-1200" data-rotate-x="0" data-rotate-y="90" data-rotate-z="0" data-scale="1">
-        
+        <div class="pres"> 
+        <img src="img/clinton.jpg"><br />
+        <p>President<em>(s)</em> Clinton?</p>
+        </div> 
         <div class="notes">
             <p>Entities (people, places, times, events, things) represent another semantic level. Now we're associating several labels with one concept.</p> 
         </div>
@@ -163,6 +182,13 @@ I'll drink it.</p>
     </div>
    <!-- conclusion -->
    <div id="Conclusion" class="step" data-x="0" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+       <ul>
+           <li><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137041">Beware Google Books</a></li>
+           <li><a href=""></a></li>
+           <li><a href=""></a></li>
+           <li><a href=""></a></li>
+           <li><a href=""></a></li>
+       </ul>
         <div class="notes">
             <p></p> 
         </div>
