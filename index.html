@@ -3,7 +3,7 @@
 
 Released under the MIT and GPL (version 2 or later) Licenses.
 
-Note, this is a total mess of inconsistent css, html, javascript and content. 
+Note, this is a total mess of inconsistent css, html, javascript and content.
 It's probably a good example of how difficult it is for me to separate content with presentation in practice.
 -->
 
@@ -48,10 +48,10 @@ It's probably a good example of how difficult it is for me to separate content w
 </div>
 
 <div id="impress">
-    
+
     <!-- each slide must be a div with class step,  must have some co-ordinates -->
-    <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1>Text as Networks</h1> 
+    <div id="title" class="step slide" data-x="-1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>Text as Networks</h1>
         <p>Dr. Alexander O&apos;Connor <br /><small>ADAPT Centre, Dublin City
             University</small></p>
         <p><i class="fa fa-twitter fa-large"></i>@<a
@@ -62,17 +62,19 @@ It's probably a good example of how difficult it is for me to separate content w
         </div>
     </div>
     <!-- Introduction section -->
-    <div id="Info80" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <div id="Info80" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <img src="img/internet.jpg" />
         <div class="notes">
             <p>Depending on who you listen to, 'unstructured data' makes up as much as 80% of the stored knowledge of mankind. To a very great extent, the way we transform data into knowledge is to add context: to group things that are alike, to count them and to examine their change over time, space or in relation to each other.
             In this talk, what I will try to address is some of the types of things that we can use computers to count, and to aggregate, especially from text. When we see a block of text, what are we really looking at?
             </p>
+            <p>Source: <a href="http://www.intel.com/content/www/us/en/communications/internet-minute-infographic.html">Intel</a>
         </div>
     </div>
-   <div id="characterLevel" class="step" data-x="1200" data-y="10000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+   <div id="characterLevel" class="step" data-x="2400" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
         <input type="text" id="character" />
         <button id="emojibutton" onclick="displayEmoji()">Convert</button>
-        <p id="emoji" ></p> 
+        <p id="emoji" ></p>
        <div class="notes">
            <p> 0x1f600 <br /> 0x0041 (A) <br /> 0x0061 (a) <br /> 0x0040 (@) <br /> 0x00C5 (Å) <br /> 0x00212B (Ångstrom) </p>
            <p> A computer just sees a series of byte codes. Two different codes can appear the same to a human, or, depending on the system, two different glyphs can be displayed for the same code.</p>
@@ -80,71 +82,110 @@ It's probably a good example of how difficult it is for me to separate content w
     </div>
     <!-- Annotations -->
    <div id="Annotations" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-       <p>At <b>three o’clock</b> precisely I was at <b>Baker Street</b>, but <b>Holmes</b> had not yet returned. The landlady informed me that he had left the house shortly after <b> eight o’clock in the morning</b>.</p> 
+       <p>At <b>three o’clock</b> precisely I was at <b>Baker Street</b>, but <b>Holmes</b> had not yet returned. The landlady informed me that he had left the house shortly after <b> eight o’clock in the morning</b>.</p>
        <p>
        At<i>|IN</i> three<i>|CD</i> o’clock<i>|JJ</i> precisely<i>|RB</i> I<i>|PRP</i> was<i>|VBD</i> at<i>|IN</i> Baker<i>|NNP</i> Street<i>|NNP</i> ,<i>|,</i> but<i>|CC</i> Holmes<i>|NNP</i> had<i>|VBD</i> not<i>|RB</i> yet<i>|RB</i> returned<i>|VBN</i> .<i>|.</i></p>
         <div class="notes">
-            
+
             <p>People don't think in terms of bytecodes, or even really in terms of letters. They tend to think in terms of <em>concepts</em>. How do we get from a stream of bytecodes to concepts people can use?</p>
         </div>
     </div>
 
     <!-- The word Network -->
    <div id="wordNetwork" class="step" data-x="1200" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1></h1> 
-        <div class="notes">
-            
+       <p class="bag">
+      At, Baker, Holmes, I, Indeed, So, Street, The, a, accustomed, after,
+      already, and, apart, associated, at, awaiting, be., beside, but, by, case,
+      ceased, character, client, crimes, deeply, disentangled, down, eight,
+      enter, exalted, failing, features, fire, follow, for, friend, from,
+      gave, grasp, grim, had, hand, have, he, head., him, his, house, however,
+      however, in, incisive, inextricable, informed, inquiry, intention,
+      interested, into, invariable, investigation, it, its, keen, landlady,
+      left, long, made, masterly, me, methods, might, morning., most, my,
+      mysteries., nature, none, not, o'clock, of, on, own., pleasure, possibility, precisely, quick, reasoning, recorded, returned., sat, shortly, situation, something, station, still, strange, study, subtle, success, surrounded, system, that, the, there, though, three, to, two, very, was, were, which, with, work, yet
+       </p>
+       <div class="notes">
+
             <p>We can look at it from the word level. This is how your classic search engine works. The Document is jumbled up into a bag of words, and we count those words that are <em>like</em> each other.</p>
-            <p>When you pop in a query keyword, we use the index (a network which links the keywords to the documents) to find our path</p> 
+            <p>When you pop in a query keyword, we use the index (a network which links the keywords to the documents) to find our path</p>
         </div>
     </div>
    <div id="TopicModels" class="step" data-x="2400" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
         <ul class="topic">
             <li>dreams</li><li>mind</li><li>dream</li><li>theory</li><li>waking</li><li>law</li><li>operation</li><li>reason</li><li>ideas</li><li>thought</li><li>nature</li><li>objects</li><li>sleep</li><li>ordinary</li><li>wholly</li><li>rev</li><li>cases</li><li>idea</li><li>combination</li>
-        </ul> 
+        </ul>
         <ol class="process">
-            <li>Extract Text</li> 
-            <li>Clean Text</li> 
-            <li>Divide the Corpus</li> 
+            <li>Extract Text</li>
+            <li>Clean Text</li>
+            <li>Divide the Corpus</li>
             <li>(LSI, LDA, NMF)</li>
-            <li>Interpret the Results</li> 
+            <li>Interpret the Results</li>
             <li>...</li>
             <li>Profit!</li>
-        </ol> 
+        </ol>
         <ul class="topic">
 <li>mass</li><li>artillery</li><li>pressure</li><li>physical</li><li>strain</li><li>made</li><li>involved</li><li>castiron</li><li>cast</li><li>mallet</li><li>large</li><li>mr</li><li>internal</li><li>powder</li><li>thickness</li><li>velocity</li><li>resistance</li><li>copper</li><li>section</li>
-        </ul>  
+        </ul>
         <div class="notes">
             <p>We can take this concept of word networks one level further, we can begin to look at words and their neighbours.</p>
         </div>
     </div>
    <div id="Embeddings" class="step" data-x="3600" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        
-       
+        <p class="embed">King + Woman - Man = Queen</p>
+        <p class="embed">Obama + Russia - USA = Putin </p>
+        <p class="embed">Breakfast, <del>Cereal</del>, Lunch,&nbsp;Dinner </p>
+        <p class="embed">Bad is to Worse as Good is to Better</p>
+        <p class="small">Try it here: <a
+            href="http://rare-technologies.com/word2vec-tutorial/">http://rare-technologies.com/word2vec-tutorial/</a>
+        </p>
+
         <div class="notes">
             <p>From Topic Models we can get, with very large amounts of data, to word embeddgings: we can learn the meaning of words from the company they keep </p>
             <p>Source: <a href="http://dhbenelux.org/wp-content/uploads/2015/04/12.pdf">Emma Clarke</a></p>
+        </div>
+    </div>
+    <div id="Sentiment" class="step" data-x="4800" data-y="2400" data-z="0">
+        <p>This movie was actually neither that funny, nor super witty.</p>
+        <p>Great for a romantic evening, but over-priced.</p>
+        <p>People like David Cameron are happy.</p>
+        <p>Oh Great! Word crashed again</p>
+        <p>This day is just getting better and better.</p>
+        <div class="notes">
+            <p><a href="http://nlp.stanford.edu/sentiment/index.html">Recursive
+                Deep Models for Semantic Compositionality Over a Sentiment
+                Treebank</a><br /><a href="http://alt.qcri.org/semeval2015/task12/">http://alt.qcri.org/semeval2015/task12/</a>
+
+            </p>
+        </div>
+    </div>
+    <div id="Treebank"  class="step" data-x="4800" data-y="2400" data-z="-2400"
+        data-rotate-x="0" data-rotate-y="90" data-rotate-z="0" data-scale="1">
+        <img src="img/treebank.png" />
+        <div class="notes">
+            <p><a
+            href="http://nlp.stanford.edu/sentiment/treebank.html">Stanford
+        Sentiment Treebank</a>
         </div>
     </div>
     <!-- The entity network -->
     <div id="EntityNetwork" class="step" data-x="1200" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
         <img src="img/yojo.gif" />
         <div class="notes">
-            <p>Entities (people, places, times, events, things) represent another semantic level. Now we're associating several labels with one concept.</p> 
+            <p>Entities (people, places, times, events, things) represent another semantic level. Now we're associating several labels with one concept.</p>
             <p>Image Source: <a href="http://www.jfsowa.com/ontology/ontometa.htm">http://www.jfsowa.com/ontology/ontometa.htm</a></p>
         </div>
     </div>
     <div id="EntityNetwork2" class="step" data-x="1200" data-y="3600" data-z="-1200" data-rotate-x="0" data-rotate-y="90" data-rotate-z="0" data-scale="1">
-        <div class="pres"> 
+        <div class="pres">
         <img src="img/clinton.jpg"><br />
         <p>President<em>(s)</em> Clinton?</p>
-        </div> 
+        </div>
         <div class="notes">
-            <p>Entities (people, places, times, events, things) represent another semantic level. Now we're associating several labels with one concept.</p> 
+            <p>Entities (people, places, times, events, things) represent another semantic level. Now we're associating several labels with one concept.</p>
         </div>
     </div>
     <div id="DocNetwork" class="step" data-x="1200" data-y="4800" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-        <h1></h1> 
+        <h1></h1>
         <div class="notes">
             <p>We can also take advantage of the document network, literally in the case of hypertext, but also through references, citations and other networks</p>
         </div>
@@ -177,21 +218,17 @@ Come, sir, I will make did behold your worship.</p>
 <p>VIOLA:<br />
 I'll drink it.</p>
         <div class="notes">
-            <p>Don't underestimate the power of character-level data.<br />Source: <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">http://karpathy.github.io/2015/05/21/rnn-effectiveness/</a></p> 
+            <p>Don't underestimate the power of character-level data.<br />Source: <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">http://karpathy.github.io/2015/05/21/rnn-effectiveness/</a></p>
         </div>
     </div>
    <!-- conclusion -->
    <div id="Conclusion" class="step" data-x="0" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
-       <ul>
-           <li><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137041">Beware Google Books</a></li>
-           <li><a href=""></a></li>
-           <li><a href=""></a></li>
-           <li><a href=""></a></li>
-           <li><a href=""></a></li>
-       </ul>
-        <div class="notes">
-            <p></p> 
-        </div>
+       <h1>Empiricism &amp; Scepticism</h1>
+      <blockquote class="twitter-tweet tw-align-center" lang="en"><p lang="en" dir="ltr">I am sensitive to the larger context, you insist on your eccentric fixations, he/she is a shallow dogmatist</p>&mdash; Andrew Goldstone (@goldstoneandrew) <a href="https://twitter.com/goldstoneandrew/status/644971266856873984">September 18, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+       <blockquote class="twitter-tweet tw-align-center" lang="en"><p lang="en" dir="ltr">In my discipline &quot;novel &amp; controversial&quot; always beats &quot;reproducible.&quot; Only thing reproducibility has going for it is: novel &amp; controversial.</p>&mdash; Ted Underworld (@Ted_Underwood) <a href="https://twitter.com/Ted_Underwood/status/637603952939397120">August 29, 2015</a></blockquote>
+<blockquote class="twitter-tweet tw-align-center" lang="en"><p lang="en" dir="ltr">Requiem for a low pass filter: <a href="http://t.co/PEpn5qsnpm">http://t.co/PEpn5qsnpm</a></p>&mdash; Matthew Jockers (@mljockers) <a href="https://twitter.com/mljockers/status/585128218190974977">April 6, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
    </div>
     <!-- keep an overview slide, you may wish to change the scaling and / or the co-ordinates -->
     <div id="overview" class="step" data-x="600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="2">

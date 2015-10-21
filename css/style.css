@@ -4,13 +4,13 @@
  *
  *
  *
- * An example block below 
+ * An example block below
  * @font-face {
  * font-family: 'Satisfy';
  *  font-style: normal;
  *  font-weight: 400;
  *  src: local('Satisfy') url(http://themes.googleusercontent.com/static/fonts/satisfy/v4/tmRzDlQs5wZmOn9mIuLa-QLUuEpTyoUstqEm5AMlJo4.woff) format('woff'),
- *  local('Satisfy') url('Satisfy.woff') format('woff'); 
+ *  local('Satisfy') url('Satisfy.woff') format('woff');
  * }
  *
  *
@@ -68,6 +68,11 @@ div.step{
 }
 
 /* specific divs */
+.impress-on-title{
+    background: url("../img/net.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
 div#title h1{
     text-align: center;
     margin: 10px;
@@ -88,7 +93,13 @@ div#characterLevel p#emoji{
     font-size: 200px;
 }
 
-
+div#Info80 > img {
+    width: 100%;
+}
+.impress-on-Info80{
+    background: url('../img/tape.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
 div#characterLevel input#character{
     position: absolute;
     left: 5px;
@@ -156,13 +167,45 @@ div#TopicModels ul li{
     padding: 4px;
     border-bottom: 1px solid #333;
 }
+div#wordNetwork {
 
+}
+div#wordNetwork p.bag{
+    margin: 10%;
+    background-color: #fff;
+    font-family: monospace;
+    font-size: 24px;
+    line-height: 28px;
+}
+.impress-on-wordNetwork {
+    background: url('../img/coffee.jpg') no-repeat center center;
+    background-size: cover;
+}
 div#EntityNetwork img{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
+.impress-on-Embeddings {
+    background: url('../img/bird.jpg') no-repeat center center;
+    background-size: cover;
+}
+div#Embeddings del{
+    text-decoration: line-through;
+}
+div#Embeddings p.embed{
+    font-family: monospace;
+    text-align: center;
+    background: #aad;
+    color: #33f;
+    margin: 5%;
+}
+div#Embeddings p.small{
+    position: absolute;
+    bottom: 0px;
+    font-size: 20px;
+    font-style: italic;
+}
 div#EntityNetwork2 div.pres{
     text-align: center;
     display: block;
@@ -175,7 +218,11 @@ div#EntityNetwork2 div.pres{
     background-size: cover;
 
 }
+div#Sentiment p{
+    text-align: justify;
+    margin: 5%;
 
+}
 div#charrnn > p {
     margin-left: 8px;
     text-align: justify;
@@ -185,3 +232,9 @@ div#charrnn > p {
 div#overview {
     display: none;
 }
+.impress-on-Conclusion{
+    background: url("../img/paper.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+}
+
