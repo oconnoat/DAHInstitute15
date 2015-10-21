@@ -27,6 +27,7 @@ div.hint {
 }
 /* Tag Markup */
 div.step{
+    font-family: Bitter;
     min-width: 900px;
     min-height: 700px;
     font-size: 48px;
@@ -167,9 +168,6 @@ div#TopicModels ul li{
     padding: 4px;
     border-bottom: 1px solid #333;
 }
-div#wordNetwork {
-
-}
 div#wordNetwork p.bag{
     margin: 10%;
     background-color: #fff;
@@ -185,6 +183,10 @@ div#EntityNetwork img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.impress-on-Sentiment{
+    background: url('../img/face.jpg') no-repeat center center;
+    background-size: cover;
 }
 .impress-on-Embeddings {
     background: url('../img/bird.jpg') no-repeat center center;
@@ -212,7 +214,13 @@ div#EntityNetwork2 div.pres{
     margin-left: auto;
     margin-right: auto;
 }
-
+div#DocNetwork{
+    background: none;
+}
+.impress-on-DocNetwork{
+    background: url("../img/library.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
 .impress-on-charrnn {
     background: url("../img/theatre.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -221,7 +229,7 @@ div#EntityNetwork2 div.pres{
 div#Sentiment p{
     text-align: justify;
     margin: 5%;
-
+    background-color: #fff;
 }
 div#charrnn > p {
     margin-left: 8px;
